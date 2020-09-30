@@ -10,7 +10,7 @@ public class QuickSortTest {
     public void shouldCorrectSortArray() {
         //given
         QuickSort quickSort = new QuickSort();
-        Array array = new Array(new int[]{5, 1, 7, 4, 8, 3}, 5);
+        Array array = new Array(new int[]{5, 1, 7, 4, 8, 3});
         int[] correctResult = new int[]{1, 3, 4, 5, 7, 8};
 
         //when

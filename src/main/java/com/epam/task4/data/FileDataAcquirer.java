@@ -16,27 +16,17 @@ public class FileDataAcquirer implements DataAcquirer {
 
     @Override
     public Array getIntArray() throws DataException {
-        Array array = new Array();
-        //this.getClass().getResourceAsStream("input.txt");
-        BufferedReader reader = null;
+        BufferedReader reader;
+        ParserStringToArray parser = new ParserStringToArray();
         try {
             reader = new BufferedReader(new FileReader(filename));
             String line = reader.readLine();
-            for (int i : array.getArray()
-            ) {
-                array.getArray()[i] = Integer.parseInt(line);
-            }
+            Array array = new Array(parser.parse(line));
+
             return array;
+
         } catch (IOException | NumberFormatException e) {
             throw new DataException(e.getMessage(), e);
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

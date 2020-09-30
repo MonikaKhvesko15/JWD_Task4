@@ -5,6 +5,7 @@ import com.epam.task4.entity.Array;
 import java.util.Scanner;
 
 public class ConsoleDataAcquirer implements DataAcquirer {
+
     private static final int SIZE = 10;
 
     @Override

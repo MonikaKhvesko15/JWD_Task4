@@ -16,12 +16,13 @@ public class Main {
     public static void main(String[] args) throws DataException, IOException {
         //create array
         AcquirerFactory acquirerFactory = new DataAcquirerFactory();
-        DataAcquirer dataAcquirer = acquirerFactory.createAcquirer(InputType.RANDOM);
+        DataAcquirer dataAcquirer = acquirerFactory.createAcquirer(InputType.FILE);//CONSOLE, RANDOM
         Array array = dataAcquirer.getIntArray();
 
         //logic
         QuickSort quickSort = new QuickSort();
         quickSort.sort(array.getArray(), 0, array.getSize() - 1);
+
         BinarySearch search = new BinarySearch();
         int findElem = 5;
         search.binarySearch(array, findElem);
@@ -29,9 +30,13 @@ public class Main {
 
         //show result
         PrintFactory factory = new PrintResultFactory();
+
         PrintResult printer = factory.createPrinter(OutputType.FILE);
-        PrintResult printer1 = factory.createPrinter(OutputType.CONSOLE);
         printer.print(array);
+
+        PrintResult printer1 = factory.createPrinter(OutputType.CONSOLE);
         printer1.print(array);
+
+
     }
 }
