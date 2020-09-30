@@ -1,6 +1,6 @@
 package com.epam.task4.data;
 
-public class DataAcquirerFactory implements AcquirerFactory{
+public class DataAcquirerFactory implements AcquirerFactory {
 
     public static final String FILE_INPUT_TXT = "C:\\Users\\HP\\Documents\\JWD_Task4\\target\\classes\\input.txt";
 

@@ -1,9 +1,5 @@
 package com.epam.task4.view;
 
-import com.epam.task4.data.ConsoleDataAcquirer;
-import com.epam.task4.data.FileDataAcquirer;
-import com.epam.task4.entity.Array;
-
 public class PrintResultFactory implements PrintFactory {
 
     @Override

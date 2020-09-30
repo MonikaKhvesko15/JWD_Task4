@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class FilePrinter implements PrintResult{
+public class FilePrinter implements PrintResult {
 
     public static final String FILE_OUTPUT_TXT = "output.txt";
 

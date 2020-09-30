@@ -21,12 +21,6 @@ public class Array {
         this.size = array.length;
     }
 
-    public Array(int[] array, int size) {
-        this.size = size;
-        this.array = new int[size];
-        this.array = array.clone();
-    }
-
     public void setSize(int size) {
         this.size = size;
     }
